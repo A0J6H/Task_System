@@ -93,6 +93,16 @@ namespace Task_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreenRound {
+            get {
+                object obj = ResourceManager.GetObject("GreenRound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GreenTask {
             get {
                 object obj = ResourceManager.GetObject("GreenTask", resourceCulture);
@@ -106,6 +116,16 @@ namespace Task_System.Properties {
         internal static System.Drawing.Bitmap Group_4 {
             get {
                 object obj = ResourceManager.GetObject("Group 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_4__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Group 4 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +153,16 @@ namespace Task_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_43 {
+            get {
+                object obj = ResourceManager.GetObject("Group 43", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Notes_background {
             get {
                 object obj = ResourceManager.GetObject("Notes background", resourceCulture);
@@ -143,9 +173,39 @@ namespace Task_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OffWhiteRound {
+            get {
+                object obj = ResourceManager.GetObject("OffWhiteRound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OffWhiteTask {
             get {
                 object obj = ResourceManager.GetObject("OffWhiteTask", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap P2Back {
+            get {
+                object obj = ResourceManager.GetObject("P2Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TanRound {
+            get {
+                object obj = ResourceManager.GetObject("TanRound", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

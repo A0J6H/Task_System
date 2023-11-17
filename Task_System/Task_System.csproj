@@ -124,7 +124,19 @@
     <None Include="Resources\Group 42.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Group 43.png" />
+    <None Include="Resources\Group 4 %281%29.png" />
+    <Content Include="Resources\grt.png" />
+    <Content Include="Resources\orb.png" />
+    <Content Include="Resources\ort.png" />
+    <None Include="Resources\P2Back.png" />
+    <Content Include="Resources\trb.png" />
+    <Content Include="Resources\trt.png" />
+    <None Include="Resources\GreenRound.png" />
+    <Content Include="Resources\grb.png" />
     <Content Include="Resources\Group 2.png" />
+    <None Include="Resources\TanRound.png" />
+    <None Include="Resources\OffWhiteRound.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
