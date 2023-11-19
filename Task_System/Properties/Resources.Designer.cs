@@ -83,6 +83,16 @@ namespace Task_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filled_filter_48 {
+            get {
+                object obj = ResourceManager.GetObject("filled-filter-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_1 {
             get {
                 object obj = ResourceManager.GetObject("Frame 1", resourceCulture);
@@ -106,6 +116,26 @@ namespace Task_System.Properties {
         internal static System.Drawing.Bitmap GreenTask {
             get {
                 object obj = ResourceManager.GetObject("GreenTask", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Group 1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_1__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Group 1 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +193,16 @@ namespace Task_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info_5_48 {
+            get {
+                object obj = ResourceManager.GetObject("info-5-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Notes_background {
             get {
                 object obj = ResourceManager.GetObject("Notes background", resourceCulture);
@@ -196,6 +236,16 @@ namespace Task_System.Properties {
         internal static System.Drawing.Bitmap P2Back {
             get {
                 object obj = ResourceManager.GetObject("P2Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_2_48 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-2-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

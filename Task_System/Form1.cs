@@ -13,6 +13,7 @@ using Task_System.Properties;
 using Newtonsoft.Json;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
+using System.Diagnostics;
 
 namespace Task_System
 {
@@ -26,6 +27,7 @@ namespace Task_System
         int yposr = 7;
         int yposl = 211;
         int c = 1;
+        string filter = string.Empty;
         string json_filepath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Tasks.json");
         List<Task> tasks = JsonConvert.DeserializeObject<List<Task>>(File.ReadAllText(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Tasks.json")));
         public Form1()
@@ -39,11 +41,15 @@ namespace Task_System
         {
             Edit.Visible = false;
             Remove.Visible = false;
+            comboBox1.Location = new Point(61, 678);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             panel2.MouseDown += Panel2_MouseDown;
+            panel3.MouseWheel += Panel3_MouseWheel;
+            comboBox1.DropDown += ComboBox1_DropDown;
+            comboBox1.DropDownClosed += ComboBox1_DropDownClosed;
             xposr = 184;
             xposl = 0;
             yposr = 7;
@@ -51,6 +57,7 @@ namespace Task_System
             c= 1;
             textBox3.MaxLength = 9;
             panel4.Location = new Point(-1,-1);
+            
             if (cols.Count() == 0)
             {
                 cols.Add(103);
@@ -90,6 +97,30 @@ namespace Task_System
                     DueDate = DateTime.Now.Date
                 };
                 tasks.Add(tutorial);
+            }
+            if (filter == "duedate")
+            {
+                List<Task> taskss = tasks.OrderBy(obj => obj.DueDate).ToList();
+                tasks = taskss;
+                label8.Text = "Sorted by Due Date :";
+            }
+            else if (filter == "duedatedesc")
+            {
+                List<Task> taskss = tasks.OrderByDescending(obj => obj.DueDate).ToList();
+                tasks = taskss;
+                label8.Text = "Sorted by Due Date Descending :";
+            }
+            else if (filter == "name")
+            {
+                List<Task> taskss = tasks.OrderBy(obj => obj.Title).ToList();
+                tasks = taskss;
+                label8.Text = "Sorted by Name :";
+            }
+            else if (filter == "creation")
+            {
+                List<Task> taskss = tasks.OrderBy(obj => obj.DateSet).ToList();
+                tasks = taskss;
+                label8.Text = "Sorted by Date Created :";
             }
             for (int i = 0; i < tasks.Count; i++)
             {
@@ -262,7 +293,7 @@ namespace Task_System
                 details.Multiline = true;
                 details.Font = font;
                 details.Text = tasks[i].Description;
-                details.Size = new Size(150, count * 17);
+                details.Size = new Size(152, count * 17);
                 details.ForeColor = Color.FromArgb(cols[tc * 3], cols[tc * 3 + 1], cols[tc * 3 + 2]);
                 details.BackColor = Color.FromArgb(cols[rc * 3], cols[rc * 3 + 1], cols[rc * 3 + 2]);
                 details.Location = new Point(22, 110);
@@ -296,10 +327,6 @@ namespace Task_System
                 panel3.Controls.Add(dynamicPanel);
             }
                 
-            
-
-           
-            
             textBox2.Clear();
             textBox3.Clear();
             dateTimePicker1.ResetText();
@@ -308,11 +335,27 @@ namespace Task_System
 
         }
 
+        private void ComboBox1_DropDownClosed(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ComboBox1_DropDown(object sender, EventArgs e)
+        {
+            comboBox1.Location = new Point(61, 651);
+        }
+
+        private void Panel3_MouseWheel(object sender, MouseEventArgs e)
+        {
+            Edit.Visible = false;
+            Remove.Visible = false;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             panel4.Visible = true;
             panel2.Visible = false;
-
+            panel6.Visible = false;
         }
 
         private void Button_Click(object sender, EventArgs e)
@@ -343,6 +386,8 @@ namespace Task_System
         {
             panel4.Visible = true;
             panel2.Visible = false;
+            
+
         }
 
 
@@ -613,6 +658,32 @@ namespace Task_System
                 string json = JsonConvert.SerializeObject(tasks, Newtonsoft.Json.Formatting.Indented);
                 File.WriteAllText(json_filepath, json);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            filter = comboBox1.Text.ToLower();
+            this.Controls.Clear();
+            this.InitializeComponent();
+            Form1_Load(this, null);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            this.Controls.Clear();
+            this.InitializeComponent();
+            Form1_Load(this, null);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/A0J6H/Task_System");
         }
     }
 }
